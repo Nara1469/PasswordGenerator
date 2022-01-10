@@ -42,3 +42,29 @@ THEN the password is either displayed in an alert or written to the page
 The following image shows the web application's appearance and functionality:
 
 ![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
+
+## Solution
+Here is my solution to generate password:
+
+First I have to declare the characters like 4 seperate string arrays to meet the criteria.
+    * Uppercase
+    * Lowercase
+    * Numbers
+    * Symbols
+
+When the "Generate Button" is clicked the writePassword() function is called.
+To generate the password, some questions need to be answered:
+    Password length (supposed to be 8-128 characters) - Uses prompt() dialog box to get number input
+    At least one of the options needed to be chosen - Uses confirm() dialog box to get each question selection
+        "Does this password include lowercase?"
+        "Does this password include uppercase?"
+        "Does this password include numbers?"
+        "Does this password include symbols?"
+    Same time I need to create string array of characters what the user is selected.
+Then I check if I have the right inputs.
+If I have the right answers, the generatePassword() function is called with length of password and the string of characters. Then the result (the generated password) is passed to the html page.
+If not, the user is alerted with wrong inputs - Uses alert() dialog box
+        then given the "Start over" suggestion and ends the process.
+
+For creating a new password, I need the password length and the selected string of characters.
+For the new password I use a "for loop" to get a randomly selected character from the passed string, and it repeats until the length of password is reached. Then the new password is passed to the writePassword() function. 
