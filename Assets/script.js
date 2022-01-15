@@ -10,7 +10,7 @@ var length;
 var characters;
 var generateBtn = document.querySelector("#generate");
 
-// Write password 
+// Write password
 function writePassword() {
   var password = "";
   var choice = true;
@@ -23,20 +23,20 @@ function writePassword() {
   length = window.prompt("Enter password length:");
   if ((length >= 8) && (length <= 128)) {
     start = true;
-    // Asking character types can be selected
-    choice = window.confirm("Does this password include lowercase?");
+    // Asking character types which can be selected
+    choice = window.confirm("Do you want your password include lowercase?");
     if (choice) {
       characters += lowerCase;
     } 
-    choice = window.confirm("Does this password include uppercase?");
+    choice = window.confirm("Do you want your password include uppercase?");
     if (choice) {
       characters += upperCase;
     } 
-    choice = window.confirm("Does this password include numbers?");
+    choice = window.confirm("Do you want your password include numbers?");
     if (choice) {
-      characters += numbers;
+      characters += numbers + numbers;
     } 
-    choice = window.confirm("Does this password include special characters?");
+    choice = window.confirm("Do you want your password include special characters?");
     if (choice) {
       characters += symbols;
     } 
